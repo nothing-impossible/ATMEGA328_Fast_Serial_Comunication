@@ -57,7 +57,7 @@ volatile uint16_t Serial_index_buffer=0;//buffer counter (volatile for using bot
 
 void Serial_Setup()
 {
-    UCSR0A |= 1<<U2X0;//double speed
+        UCSR0A |= 1<<U2X0;//double speed
 	UBRR0H = SERIAL_BAUDC>>8; //Set the BAUD to BAUD Register (high Register)
 	UBRR0L = SERIAL_BAUDC;//Set the BAUD to BAUD Register (low Register)
 	UCSR0B |=(1<<TXEN0)|(1<<RXEN0); //Enable TX and RX Pins
